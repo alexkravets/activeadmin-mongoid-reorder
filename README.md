@@ -29,14 +29,19 @@ collection_action :reorder, :method => :put do
 end
 ```
 
-And finally enable sorting js functionality. jQuery-ui is included by activeadmin by default, so all you need is to include this code in ```active_admin.js.coffee```:
+Reorder table type should be specified for ```index``` view, here is an example how this should look like:
+
 ```
-$("#pages tbody")
-  .sortable(sortable_options("/admin/pages/reorder"))
-  .disableSelection()
+index :as => :reorder_table do
+  column :title
+  default_actions
+end
 ```
-Replace ```pages``` with the models name.
+
+And finally enable sorting js functionality. jQuery-ui is included by activeadmin by default, so all you need is to include ```activeadmin_reoder_table``` in ```active_admin.js.coffee```:
+
+```#= require activeadmin_reorder_table```
 
 ## The End
 
-Finally having reordarable index table it's better to disable tables ordering options in the header.
+That's it.
