@@ -3,7 +3,7 @@ $:.push File.expand_path("../lib", __FILE__)
 
 Gem::Specification.new do |gem|
   gem.name    = 'activeadmin-mongoid-reorder'
-  gem.version = '0.2.0'
+  gem.version = '0.2.1'
   gem.summary = 'Reorder index table rows plugin for activeadmin.'
   gem.description = ''
   gem.license = 'MIT'
