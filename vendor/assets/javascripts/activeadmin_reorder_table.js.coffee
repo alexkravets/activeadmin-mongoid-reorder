@@ -1,3 +1,6 @@
+if !Array.prototype.last
+  Array.prototype.last = () -> return this[this.length - 1]
+
 $ ->
   window.sortable_options = (url) ->
     options =
