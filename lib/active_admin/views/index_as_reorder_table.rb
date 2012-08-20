@@ -5,7 +5,7 @@ module ActiveAdmin
         table_options = {
           #:id => active_admin_config.resource_name.plural,
           # for some reason here plural is missing
-          :id => active_admin_config.resource_name.pluralize.downcase,
+          :id => active_admin_config.resource_name.pluralize.downcase.gsub(' ', '_'),
           :sortable => false,
           :class => "index_table index reorder",
           :i18n => active_admin_config.resource_class,
